@@ -1,0 +1,72 @@
+:root {
+  --morado: #4A5EA2;
+  --white: #fff;
+  --gris: #dfdfdf;
+}
+  
+.image{
+    background-image: url('../Portada.jpg');
+    background-size: cover;
+    height: 32vh;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+  
+  
+    
+}
+@media (min-width:768px){
+    .image{
+      text-align: center;
+      /* background-attachment: fixed; */
+      background-position: center .0001px;
+      height: 50vh;
+      margin-top: -1rem;
+      
+    }
+  }
+  @media (min-width:1024px){
+    .image{
+      height: 100vh;
+      /* position: relative; */
+      background-position: center .001rem;
+    }
+  }
+  .onda{
+     /* position: absolute; */
+      fill: var(--morado);
+      left:0; 
+      top:290px; 
+      width:100%;
+      height:60px;
+      margin-top: -32px;
+      
+  }
+  @media (min-width:768px){
+    .onda{
+      fill: var(--white);
+      top:102%;
+      height: 100px;
+      margin-top: -3.4rem; 
+      position: relative; 
+      
+    }
+    
+  }
+  
+  @media (min-width:1024px){
+    .onda{
+      margin-top: -7rem;  
+      height:200px;
+  
+
+        
+    }
+}
+ 
+
+
+
+  
+   

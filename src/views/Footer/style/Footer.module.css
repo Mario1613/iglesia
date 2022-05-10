@@ -1,0 +1,53 @@
+:root {
+    --morado: #4A5EA2;
+    --moradoZul:#3B4B7E;
+    --white: #fff;
+    
+}
+
+.background {
+    background-color: var(--moradoZul);
+    max-width: 100%;
+
+
+}
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .vertical{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.icon{
+    text-align: center;
+    display:grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+
+svg{
+    width: 70%;
+    height: 70%;
+    fill: var(--white);
+}
+@media (min-width:1024px){
+
+    svg{
+        width: 50%;
+        height: 50%;
+        fill: var(--white);
+    }
+}
+
+ 
+

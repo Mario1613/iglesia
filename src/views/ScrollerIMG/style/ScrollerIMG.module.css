@@ -1,0 +1,45 @@
+:root{
+    --morado: #4A5EA2;
+    --white: #fff;
+    --gris: #dfdfdf;
+}
+.backgroundWhite{
+    margin: 4rem 0 4rem 0;
+    background-color: var(--white);
+}
+.backgroundGray{
+    padding: 4rem 0 4rem 0;
+    background-color: var(--gris);
+}
+
+@media(min-width:1024px){
+    .backgroundGray{
+        padding: 8rem 0 8rem 0;
+    }
+}
+
+.container{
+    max-width: 85%;
+    text-align: center;   
+    margin: 0 auto;
+   
+    
+}
+.ImgSize{
+    width: 100%;
+    height: 12rem; 
+    
+}
+
+@media(min-width:768px){
+        .ImgSize{
+            width:95%;
+            height: 155px;
+        }
+}
+@media(min-width:1024px){
+        .ImgSize{
+            height: 288px;
+            margin-left: .6rem; 
+        }
+}

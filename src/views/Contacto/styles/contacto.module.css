@@ -1,0 +1,61 @@
+:root {
+    --morado: #4A5EA2;
+    --white: #fff;
+    --gris: #dfdfdf;
+}
+.background {
+    background-color: var(--morado);
+    padding: 5rem 0 5rem 0;
+    max-width: 100%;
+}
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+}
+.pixelImg {
+    width: 100%;
+}
+.sectionText{
+    width: 100%;
+    color: var(--white);
+}
+
+@media (min-width:992px) {
+    .pixelImg {
+        height: 500px;
+    }
+    .sectionText {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+
+}
+@media (min-width:768px){
+    .sectionText:nth-of-type(1) {
+        grid-row: 1;
+      }
+    .pixelImg:nth-of-type(2) {
+        grid-row: 2;
+      }
+}
+.tituloContacto{
+    text-align: center;
+    font-size: 2rem;
+}
+.btnCentrador{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media (min-width:768px){
+    .btnCentrador{
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1024px){
+    .btnCentrador{
+        margin-top: 13%;
+        
+    }
+}

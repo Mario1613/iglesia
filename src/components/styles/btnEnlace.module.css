@@ -1,0 +1,33 @@
+:root {
+    --morado: #4A5EA2;
+    --white: #fff;
+    --gris: #dfdfdf;
+
+}
+.enlaceStyle{
+    background-color: var(--white);
+    color: var(--morado);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    text-align: center;
+    padding: 1rem .8rem;
+    text-decoration: none;
+    box-shadow: 1px 2px 3px #000000;
+
+}
+
+@media (min-width: 992px){
+    .enlaceStyle{
+        padding: 7% 8%;
+        font-size: 20px;
+
+    }
+
+}
+.enlaceStyle:hover{
+  cursor: pointer;
+  background-color: var(--gris);
+  color: var(--morado);
+
+}

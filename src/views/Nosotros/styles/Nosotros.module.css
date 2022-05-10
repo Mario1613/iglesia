@@ -1,0 +1,43 @@
+:root {
+    --morado: #4A5EA2;
+    --white: #fff;
+    --gris: #dfdfdf;
+}
+.background {
+    background-color: var(--morado);
+    padding: 3rem 0 1rem 0;
+    max-width: 100%;
+    
+}
+@media(min-width: 1024px) {
+    .background {
+        padding: .5rem 0;
+    }
+}
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+}
+.pixelImg {
+    width: 100%;
+}
+.sectionText{
+    width: 100%;
+    color: var(--white);
+}
+@media (min-width:768px) {
+    video {
+        height: 28rem;
+    }
+}
+
+@media (min-width:992px) {
+    video {
+        height: 500px;
+    }
+    .sectionText {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+
+}
