@@ -16,34 +16,32 @@ import Footer from "./views/Footer";
 
 
 
+
 const App = ()=> {
  
   return (
     <>
+      <Router >
+        <Nav />
+        <Switch>
 
-       <Router >
-
-       
-            <Nav/>
-    <Switch>
-
-         <Route path='/' exact>
-         <Inicio/>
-            <Nosotros/>
+          <Route path='/' component={Inicio} exact>
+            <Inicio />
+            <Nosotros />
             <ProgramaAmanecer />
-            <Contacto/>
-            <ScrollerIMG/>
-            <Footer/>
-         </Route>
-       
-          <Route path="/capellania">
-            <Capellania/>
-            
-          </Route>         
-         {/* </Switch> */}
-    </Switch>
-       </Router>
-         </>
+            <Contacto />
+            <ScrollerIMG />
+            <Footer />
+          </Route>
+
+          <Route path="/capellania" component={Capellania}>
+            <Capellania />
+
+          </Route>
+         
+        </Switch>
+      </Router>
+    </>
   )
   
 }
