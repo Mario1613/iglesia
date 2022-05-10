@@ -1,7 +1,6 @@
 import {
   BrowserRouter as Router,
-  Route,
-  Switch
+  Route
 } from "react-router-dom";
 import ProgramaAmanecer from "./views/ProgramaAmanecer";
 
