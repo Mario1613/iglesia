@@ -1,4 +1,4 @@
-import IMG from '.././img/Portada.jpg';
+
 import style from './style/ScrollerIMG.module.css';
 import Slider from 'react-slick';
 import { useEffect, useState } from 'react';
