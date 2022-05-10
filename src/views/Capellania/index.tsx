@@ -8,6 +8,7 @@ import image7 from './img/0007.jpg';
 import image8 from './img/0008.jpg';
 import image9 from './img/0009.jpg';
 import image10 from './img/0010.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Capellania() {
   return (
@@ -33,10 +34,12 @@ export default function Capellania() {
         <div className={styles.containerFooter}>
           <div className={styles.vertical}>
             <div className={styles.icon}>
-              <a href="/inicio">
+             
+                <Link to="/">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-caret-left-fill" viewBox="0 0 16 16">
                   <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                </svg></a>
+                </svg>
+                </Link>
 
              </div>
           </div>
