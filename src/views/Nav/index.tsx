@@ -25,7 +25,7 @@ function Nav (){
     <nav className={`barTwo ${clicked ? 'active' : ''}`}>
       <UnorderedList>
         <Navegacion>
-          <Link to="/inicio" className={styles.navegacion}>Inicio</Link>
+          <Link to="/" className={styles.navegacion}>Inicio</Link>
         </Navegacion>
 
         <Navegacion>

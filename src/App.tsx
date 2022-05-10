@@ -1,6 +1,7 @@
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from "react-router-dom";
 import ProgramaAmanecer from "./views/ProgramaAmanecer";
 
@@ -21,21 +22,24 @@ const App = ()=> {
     <>
 
        <Router >
-         <Route path='/'>
+
+       
             <Nav/>
-         </Route>
-          <Route path="/inicio">
-            <Inicio/>
+
+         <Route path='/' exact>
+         <Inicio/>
             <Nosotros/>
             <ProgramaAmanecer />
             <Contacto/>
             <ScrollerIMG/>
             <Footer/>
-          </Route>
+         </Route>
+       
           <Route path="/capellania">
             <Capellania/>
             
           </Route>         
+         {/* </Switch> */}
        </Router>
          </>
   )
