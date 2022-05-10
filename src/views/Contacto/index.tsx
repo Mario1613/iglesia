@@ -58,8 +58,8 @@ if(isLoading){
                        
                         <BtnLink enlace={"https://www.facebook.com/profile.php?id=100044996093662"} nameLink={'Facebook'}/>
                         <button className={styleLink.enlaceStyle} onClick={()=>changeStateModalOne(!stateModalOne)}>Donaciones</button>
-                        <BtnLink enlace="/capellania" nameLink={'Capellania'}/>
-                        <Link to="/capellania">Capellania</Link>
+                        
+                        <Link to="/capellania" className={styleLink.enlaceStyle}>Capellania</Link>
                         {/* <BtnLink enlace={"https://www.facebook.com/mario.cortezcortes/"} nameLink={'Correo'}/> */}
                   
                       </div>
