@@ -1,6 +1,7 @@
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from "react-router-dom";
 import ProgramaAmanecer from "./views/ProgramaAmanecer";
 
@@ -24,6 +25,7 @@ const App = ()=> {
 
        
             <Nav/>
+    <Switch>
 
          <Route path='/' exact>
          <Inicio/>
@@ -39,6 +41,7 @@ const App = ()=> {
             
           </Route>         
          {/* </Switch> */}
+    </Switch>
        </Router>
          </>
   )
