@@ -11,7 +11,7 @@ const Nosotros = ()=>{
   useEffect(()=>{
       const consultarAPI = async ()=>{
         try{
-          const url:string = 'http://localhost:1337/section-nosotros';
+          const url:string = 'https://dolphin-app-rn85f.ondigitalocean.app/section-nosotros';
           const respuesta = await fetch(url);
           const resultado = await respuesta.json();
           setDates(resultado);

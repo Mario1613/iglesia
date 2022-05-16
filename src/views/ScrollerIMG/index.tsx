@@ -8,7 +8,7 @@ const ScrollerIMG = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(()=>{
     const consultarAPI = async () =>{
-      const url = 'http://localhost:1337/section-carousels'
+      const url = 'https://dolphin-app-rn85f.ondigitalocean.app/section-carousels'
       const respuesta = await fetch(url);
       const resultado = await respuesta.json()
       setIsLoading(false)

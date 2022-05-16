@@ -17,7 +17,7 @@ const Contacto =()=>{
   useEffect(()=>{
     const consultarAPI = async () =>{
     try{
-    const url:string = 'http://localhost:1337/section-contactos';
+    const url:string = 'https://dolphin-app-rn85f.ondigitalocean.app/section-contactos';
     const respuesta = await fetch(url);
     const resultado = await respuesta.json()
     setDatas(resultado)
