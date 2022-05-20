@@ -13,6 +13,7 @@ export default function ProgramaAmanecer() {
       const url = 'https://dolphin-app-rn85f.ondigitalocean.app/section-programa-amanecers'
       const respuesta = await fetch(url);
       const resultado = await respuesta.json()
+      const resultado = resultado.reverse();
       setIsLoading(false)
       setData(resultado)
     }
