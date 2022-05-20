@@ -5,11 +5,10 @@ import ReactPlayer from 'react-player';
 
 const List = ({data}:any) => {
 
-  const date = data.reverse();
+  const data = data.reverse();
   return (
     <article className={styles.container}>  
- 
-      {date.map((date:any): JSX.Element=>(
+      {data.map((date:any): JSX.Element=>(
         <div className={styles.video} key={date.id} >
     
           <ReactPlayer url={date.videourl} width="100%" height="100%"  />
