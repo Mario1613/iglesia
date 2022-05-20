@@ -6,9 +6,13 @@ import ReactPlayer from 'react-player';
 const List = ({data}:any) => {
 
   const data = data.reverse();
+
+  const data = data.slice(0, 5);
+
+
   return (
     <article className={styles.container}>  
-      {data.filter((date, count:any) => count < 4).map((date:any): JSX.Element=>(
+      {data.map((date:any): JSX.Element=>(
         <div className={styles.video} key={date.id} >
     
           <ReactPlayer url={date.videourl} width="100%" height="100%"  />
