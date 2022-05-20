@@ -7,7 +7,7 @@ const List = ({data}:any) => {
 
   const data = data.reverse();
 
-  const data = data.slice(0, 5);
+  const data = data.slice(0, 4);
 
 
   return (
