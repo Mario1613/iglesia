@@ -8,7 +8,7 @@ const List = ({data}:any) => {
   const data = data.reverse();
   return (
     <article className={styles.container}>  
-      {data.filter((item, count:any) => count < 4).map((date:any): JSX.Element=>(
+      {data.filter((date, count:any) => count < 4).map((date:any): JSX.Element=>(
         <div className={styles.video} key={date.id} >
     
           <ReactPlayer url={date.videourl} width="100%" height="100%"  />
