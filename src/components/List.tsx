@@ -9,7 +9,7 @@ const List = ({data}:any) => {
   return (
     <article className={styles.container}>  
  
-      {date.reverse.map((date:any): JSX.Element=>(
+      {date.map((date:any): JSX.Element=>(
         <div className={styles.video} key={date.id} >
     
           <ReactPlayer url={date.videourl} width="100%" height="100%"  />
