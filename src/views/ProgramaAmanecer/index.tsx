@@ -12,8 +12,7 @@ export default function ProgramaAmanecer() {
     const consultarAPI = async () =>{
       const url = 'https://dolphin-app-rn85f.ondigitalocean.app/section-programa-amanecers'
       const respuesta = await fetch(url);
-      const resultado = await respuesta.json()
-      const resultado = resultado.reverse();
+      const resultado = await respuesta.json();
       setIsLoading(false)
       setData(resultado)
     }
