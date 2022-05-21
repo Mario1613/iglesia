@@ -1,7 +1,7 @@
 :root {
     --morado: #4A5EA2;
     --moradoZul:#3B4B7E;
-    
+    --white: #fff;
     
 }
 
@@ -53,7 +53,7 @@ svg{
     
 }
 .bi-facebook{
-    fill: white;
+    fill: var(--white);
 }
 
 
