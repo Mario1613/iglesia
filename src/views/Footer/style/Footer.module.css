@@ -38,7 +38,10 @@
 svg{
     width: 70%;
     height: 70%;
+}
+.facebook{
     fill: var(--white); 
+
 }
 
 @media (min-width:1024px){
@@ -48,7 +51,7 @@ svg{
         height: 50%;
     }
 }
-.bi-youtube{
+.youtube{
     fill: red;
     color: red;
     background: red;
