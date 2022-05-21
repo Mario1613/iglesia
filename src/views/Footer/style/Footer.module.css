@@ -48,6 +48,10 @@ svg{
         fill: var(--white);
     }
 }
+.bi-youtube{
+    color: red;
+    background:red ;
+}
 
  
 
