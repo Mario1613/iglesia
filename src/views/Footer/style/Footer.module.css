@@ -40,6 +40,9 @@ svg{
     height: 70%;
     fill: var(--white);
 }
+svg .bi-youtube{
+    fill: red;
+}
 @media (min-width:1024px){
 
     svg{
