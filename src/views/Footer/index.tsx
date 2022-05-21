@@ -1,19 +1,19 @@
 
-import style from './style/Footer.module.css';
+import './style/Footer.module.css';
 
 const Footer = () => {
 
   return (
     <footer>
 
-      <div className={style.background}>
-        <div className={style.container}>
-          <div className={style.vertical}>
+      <div className='background'>
+        <div className='container'>
+          <div className='vertical'>
 
             <div className='pluss'>
             </div>
 
-            <div className={style.icon}>
+            <div className='icon'>
               <a
                 href="https://www.facebook.com/profile.php?id=100044996093662"
                 title="Facebook"
