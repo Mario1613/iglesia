@@ -53,7 +53,7 @@ svg{
     
 }
 .bi-facebook{
-    fill: var(--white)
+    fill: white;
 }
 
 
