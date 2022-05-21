@@ -26,7 +26,7 @@ export default function ProgramaAmanecer() {
   
   return (
     <section className={styles.background} >
-            <h2 className={styles.titleSecundary}>Programa Amanecer</h2>
+            <h2 className={styles.titleSecundary}>Mí Devocional Amanecer En Cristo</h2>
           <List data ={data}/>
         
     </section>
