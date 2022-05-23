@@ -72,7 +72,7 @@ const Header = styled.header`
       display: none;
     }
     width: 33px;
-    height: 30px;
+    height: 25px;
     margin: -50px 86%;
     position: absolute;
     cursor: pointer;
