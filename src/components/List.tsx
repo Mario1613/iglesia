@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 
 const List = ({data}:any) => {
 
-  // const data = data.reverse();
+  const data = data.reverse();
 
   return (
     <article className={styles.container}>  
