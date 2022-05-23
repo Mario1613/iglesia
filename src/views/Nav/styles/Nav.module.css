@@ -42,8 +42,8 @@
         background-color:var(--white);
     }
     .navegacion, .navegacionc{
-        
-        padding: 2.10rem 0.5rem; 
+        /*mejora*/
+        padding: 1.6rem 0.5rem; 
         display:block;
         width:106px;
         text-align:center;
