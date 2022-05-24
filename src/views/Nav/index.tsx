@@ -50,8 +50,8 @@ function Nav (){
         <div className='minContainer'>
 
         <img src={Perfil} alt="Logo" className="imgsize"/>
-        <div>
-          <h2>Iván Alberto Cuenca Robles</h2>
+        <div className='sectionTexto' >
+          <h3>Iván Alberto Cuenca Robles</h3>
           <p style={{textAlign:'justify'}}>Es oriundo de Jamundí Valle en el país de Colombia, nacido el 25 de Septiembre de 1976, al nacer sus padres eran cristianos de la Iglesia del nombre de Jesús, es nacido en un hogar cristiano y toda su vida ha estado en los caminos del Señor Jesucristo, ha sido servidor en la Iglesia desde niño predicando en los cultos de niños, en la adolescencia, en la juventud y en su edad adulta, hace 16 años sirve en el santo ministerio en países como España y Estados Unidos, por la gracia del Señor Jesús ha podido cursar sus estudios como Lice. en Teología, Doctorado en Filosofía y Ciencias Religiosas,  diplomados en Teología, Consejería Familiar, Ciencia y Fe, Comunicación Radial y Televisión, Capellanía Internacional, Defensor en Derechos Humanos entre otros, Actualmente es pastor en Sarasota Florida en los Estados Unidos.</p>
          
         <button className="btnModal" onClick={() => setState(!state)} >Cerrar</button>
@@ -124,7 +124,11 @@ Modal
   width: 80%;
   }
 }
-
+.sectionTexto{
+  @media(min-width:768px){
+    margin-top: -1.5rem;
+  }
+}
 
 
 .biografia.active{
