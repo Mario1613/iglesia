@@ -21,7 +21,6 @@ const ScrollerIMG = () => {
     return <h1>Cargando...</h1>
   }
  
- console.log(data);
 
   
 
