@@ -2,17 +2,18 @@
 import style from './style/ScrollerIMG.module.css';
 import Slider from 'react-slick';
 import { useEffect, useState } from 'react';
+import React from 'react';
 const ScrollerIMG = () => {
 
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = React.useState<Boolean>(true);
   useEffect(()=>{
     const consultarAPI = async () =>{
-      const url = 'https://dolphin-app-rn85f.ondigitalocean.app/section-carousels'
+      const url:string = 'https://dolphin-app-rn85f.ondigitalocean.app/section-carousels';
       const respuesta = await fetch(url);
-      const resultado = await respuesta.json()
-      setIsLoading(false)
-      setData(resultado)
+      const resultado = await respuesta.json();
+      setIsLoading(false);
+      setData(resultado);
     }
     consultarAPI();
   },[]);
@@ -20,7 +21,7 @@ const ScrollerIMG = () => {
     return <h1>Cargando...</h1>
   }
  
- 
+ console.log(data);
 
   
 

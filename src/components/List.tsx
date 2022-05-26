@@ -3,8 +3,16 @@ import styles from '../views/ProgramaAmanecer/styles/ProgramaAmanecer.module.css
 import ReactPlayer from 'react-player';
 
 
-const List = ({data}:any) => {
+interface Props {
+  data: any;
+}
 
+
+
+
+const List = ({data}:Props) => {
+  
+ 
   const dataNormalize = data.reverse();
 
   return (

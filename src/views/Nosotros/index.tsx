@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react';
 import styled from 'styled-components';
 import styles from './styles/Nosotros.module.css';
 
 
 const Nosotros = ()=>{
 
-  const [dates, setDates] = useState([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [dates, setDates] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
     
   useEffect(()=>{
       const consultarAPI = async ()=>{

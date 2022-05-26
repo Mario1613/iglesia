@@ -6,13 +6,14 @@ import {
  
 } from "react-router-dom";
 import BurguerButton from "../../components/BurguerButton";
-import {useState} from 'react';
+
 import Perfil from '../Nav/Perfil.jpg';
+import React from "react";
 
 
 function Nav (){
-  const [state, setState] = useState(false);
-  const [clicked, setClicked] = useState(false);
+  const [state, setState] = React.useState<boolean>(false);
+  const [clicked, setClicked] = React.useState<Boolean>(false);
 
     return(
    
