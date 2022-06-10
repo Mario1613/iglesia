@@ -14,7 +14,7 @@ import ScrollerIMG from "./views/ScrollerIMG";
 import Footer from "./views/Footer";
 
 
-
+import Books from "./views/Books";
 
 
 const App = ()=> {
@@ -36,6 +36,12 @@ const App = ()=> {
 
           <Route path="/capellania" component={Capellania}>
             <Capellania />
+
+          </Route>
+
+          <Route path="/books" component={Books}>
+            <Books />
+            <Footer />
 
           </Route>
          

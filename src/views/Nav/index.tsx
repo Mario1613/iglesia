@@ -28,6 +28,11 @@ function Nav (){
         <Navegacion>
           <Link to="/" className={styles.navegacion}>Inicio</Link>
         </Navegacion>
+        <Navegacion>
+          <Link to="/books" className={styles.navegacion}>
+            libros
+          </Link>
+        </Navegacion>
 
         <Navegacion>
           <button onClick={() => setState(!state)} className={styles.navegacionc}>Pastor</button>
@@ -256,11 +261,16 @@ color: var(--morado);
 `;
 
 const UnorderedList = styled.ul`
-@media (min-width: 768px){
+@media (min-width:768px){
+  margin-right:12rem ;
+  display:flex;
+  justify-content:flex-end;
+}
 
-display:flex;
-justify-content:flex-end;
+@media (min-width: 780px){
+
 margin-right:15rem ;
+
 }
 @media (max-width:767px){
   margin-top: 120px;
