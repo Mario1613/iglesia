@@ -13,7 +13,7 @@ const Books = () => {
             const respuesta = await fetch(url);
             const resultado = await respuesta.json()
             // console.log(resultado[0])
-                setData(resultado);
+                setData(resultado.reverse());
               }catch(error){
                 console.log('error') 
               }
