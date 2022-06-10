@@ -29,10 +29,10 @@ const Books = () => {
         <h2 className={styles.titleSecundary}>Libros</h2>
         <article className={styles.container} >
         <a href='https://drive.google.com/file/d/1VoV5S2fGFw2OBAcTiRdUqN7OV3xngLEw/view?usp=sharing'title='books'>
-          <img src={Biblia} width="100%" /> 
+          <img src={Biblia} width="100%" alt='biblia' /> 
         </a> 
         <a href='https://drive.google.com/file/d/1Vo9yROXXgQErRD6dm4KmbeELFSsGwyNF/view?usp=sharing'title='books'>
-          <img src={Biblia2} width="100%" /> 
+          <img src={Biblia2} width="100%" alt='biblia' /> 
         </a> 
             {datas.map((data:any): JSX.Element =>(
                   <div className={styles.cards} key={data.id}>
