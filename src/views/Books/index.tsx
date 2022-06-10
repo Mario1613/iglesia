@@ -39,15 +39,15 @@ const Books = () => {
         
         <h2 className={styles.titleSecundary}>Libros</h2>
         <article className={styles.container} >
-        <a href='https://drive.google.com/file/d/1VoV5S2fGFw2OBAcTiRdUqN7OV3xngLEw/view?usp=sharing' target='_blank'>
+        <a href='https://drive.google.com/file/d/1VoV5S2fGFw2OBAcTiRdUqN7OV3xngLEw/view?usp=sharing' target='_blank' title='books'>
           <img src={Biblia} width="100%" /> 
         </a> 
-        <a href='https://drive.google.com/file/d/1Vo9yROXXgQErRD6dm4KmbeELFSsGwyNF/view?usp=sharing' target='_blank'>
+        <a href='https://drive.google.com/file/d/1Vo9yROXXgQErRD6dm4KmbeELFSsGwyNF/view?usp=sharing' target='_blank' title='books'>
           <img src={Biblia2} width="100%" /> 
         </a> 
             {datas.map((data:any): JSX.Element =>(
                   <div className={styles.cards} key={data.id}>
-                  <a href={data.enlace} target='_blank'>
+                  <a href={data.enlace} target='_blank' title='Books'>
                 
                  <img src={data.portadalibros.url} alt="Portada" width="100%" /> 
                   </a>

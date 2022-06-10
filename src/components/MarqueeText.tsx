@@ -11,18 +11,17 @@ const MarqueeText = () =>{
             const respuesta = await fetch(url);
             const resultado = await respuesta.json()
             // console.log(resultado[0]);
-                setData(resultado);
+                setData(resultado.reverse());
               }catch(error){
                 console.log('error') ;
               }
             }
             consultarAPI();
     },[]);
-    const datasNormalize:Object[] = datas.reverse();
 
     return(
         <div>
-        { datasNormalize.map((data:any): JSX.Element =>(
+        { datas.map((data:any): JSX.Element =>(
             <h3 key={data.id} >{data.textodelasemana}</h3>
         )
         
