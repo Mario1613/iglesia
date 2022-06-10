@@ -36,7 +36,7 @@ const Books = () => {
         </a> 
             {datas.map((data:any): JSX.Element =>(
                   <div className={styles.cards} key={data.id}>
-                  <a href={data.enlace} target='_blank' title='Books'>
+                  <a href={data.enlace} title='Books'>
                  <img src={data.portadalibros.url} alt="Portada" width="100%" /> 
                   </a>
               </div>
