@@ -1,11 +1,11 @@
 import styles from '../views/ProgramaAmanecer/styles/ProgramaAmanecer.module.css';
 import ReactPlayer from 'react-player';
-interface video {
+interface Video {
   video:{
     videourl: string;
   }
 }
-const List = ({video}:video) => {
+const List = ({video}:Video) => {
   return (
         <div className={styles.video} >
           <ReactPlayer url={video.videourl} width="100%" height="100%"  />

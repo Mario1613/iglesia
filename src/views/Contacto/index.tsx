@@ -6,7 +6,7 @@ import styles from '../Contacto/styles/contacto.module.css';
 import styleLink from '../../components/styles/btnEnlace.module.css';
 import IMG from '../Contacto/img/QR.png';
 import { Link } from 'react-router-dom';
-import React from 'react';
+
 
 
 
@@ -27,7 +27,7 @@ const Contacto =()=>{
 
   const [datas, setDatas] = useState<Array<Datas>>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [stateModalOne, changeStateModalOne] = React.useState<boolean>(false)
+  const [stateModalOne, changeStateModalOne] = useState<boolean>(false)
   useEffect(()=>{
     const consultarAPI = async () =>{
     try{

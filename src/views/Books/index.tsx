@@ -45,7 +45,7 @@ const Books = () => {
         <a href='https://drive.google.com/file/d/1Vo9yROXXgQErRD6dm4KmbeELFSsGwyNF/view?usp=sharing'title='books'>
           <img src={Biblia2} width="100%" alt='biblia' /> 
         </a> 
-            {datas.map((data:any): JSX.Element =>(
+            {datas.map((data:Data): JSX.Element =>(
                   <div className={styles.cards} key={data.id}>
                   <a href={data.enlace} title='Books'>
                  <img src={data.portadalibros.url} alt="Portada" width="100%" /> 
