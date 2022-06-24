@@ -3,12 +3,6 @@ import styles from '../views/ProgramaAmanecer/styles/ProgramaAmanecer.module.css
 import ReactPlayer from 'react-player';
 
 
-interface videoProps {
-  id:string,
-  url:string,
-  videourl:string
-
-}
 
 
 
