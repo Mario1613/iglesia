@@ -28,14 +28,17 @@ const Nosotros = ()=>{
   if(isLoading){
     return <h1>Cargando...</h1>
   }
-
-  const {imgnosotros, tnosotros, pnosotros, pnosotros2, tmision, pmision, tvision, pvision } = dates[0]; 
+ 
+   const {imgnosotros, tnosotros, pnosotros, pnosotros2, tmision, pmision, tvision, pvision } = dates[0]; 
   const {url} = imgnosotros;
 
   return (
     <section id='nosotros'>
         <div className={styles.background}>
             <div className={styles.container}>
+            
+
+                
                 <Centrador>
                 <video className={styles.pixelImg} controls >
                     <source src={url}  type="video/mp4" />
@@ -47,8 +50,9 @@ const Nosotros = ()=>{
                         <p>{pmision}</p>
                         <h2>{tvision}</h2>
                         <p>{pvision}</p>
-                    </div>
+                    </div> 
                 </Centrador>
+              
             </div>
         </div>
     </section>

@@ -1,21 +1,21 @@
 import styles from './styles/ProgramaAmanecer.module.css';
 
-import { useEffect} from 'react';
-import List from '../../components/List';
+import { useEffect, useState} from 'react';
+import List from '../../components/VideosSunriseList';
 import React from 'react';
 
 
 export default function ProgramaAmanecer() {
 
-  const [data, setData] = React.useState<object>([]);
-  const [isLoading, setIsLoading] = React.useState<Boolean>(true);
+  const [videos, setVideos] = useState([]);
+  const [isLoading, setIsLoading] = useState<Boolean>(true);
+
   useEffect(()=>{
     const consultarAPI = async () =>{
-      const url:string = 'https://dolphin-app-rn85f.ondigitalocean.app/section-programa-amanecers';
-      const respuesta = await fetch(url);
+      const respuesta = await fetch('https://dolphin-app-rn85f.ondigitalocean.app/section-programa-amanecers');
       const resultado = await respuesta.json();
       setIsLoading(false);
-      setData(resultado);
+      setVideos(resultado);
     }
     consultarAPI();
   },[]);
@@ -28,8 +28,10 @@ export default function ProgramaAmanecer() {
   return (
     <section className={styles.background} >
             <h2 className={styles.titleSecundary}>Mí Devocional Amanecer En Cristo</h2>
-          <List data ={data}/>
-        
+            <article className={styles.container}> 
+            {videos.map((video)=>(<List video={video} key={video} />))}
+          
+        </article>
     </section>
   )
 }
