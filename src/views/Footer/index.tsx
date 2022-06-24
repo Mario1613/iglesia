@@ -5,14 +5,11 @@ const Footer = () => {
 
   return (
     <footer>
-
       <div className={styles.background}>
         <div className={styles.container}>
           <div className={styles.vertical}>
-
             <div className='pluss'>
             </div>
-
             <div className={styles.icon}>
               <a
                 href="https://www.facebook.com/profile.php?id=100044996093662"
