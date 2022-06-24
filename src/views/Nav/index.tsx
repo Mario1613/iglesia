@@ -8,12 +8,12 @@ import {
 import BurguerButton from "../../components/BurguerButton";
 
 import Perfil from '../Nav/Perfil.jpg';
-import React from "react";
+import {useState} from "react";
 
 
 function Nav (){
-  const [state, setState] = React.useState<boolean>(false);
-  const [clicked, setClicked] = React.useState<Boolean>(false);
+  const [state, setState] = useState<boolean>(false);
+  const [clicked, setClicked] = useState<Boolean>(false);
 
     return(
    

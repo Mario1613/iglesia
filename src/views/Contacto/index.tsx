@@ -1,18 +1,31 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { BtnLink } from '../../components/BtnLink';
 import { Modal } from '../../components/Modal';
-import styles from '../Contacto/styles/contacto.module.css'
-import styleLink from '../../components/styles/btnEnlace.module.css'
-
+import styles from '../Contacto/styles/contacto.module.css';
+import styleLink from '../../components/styles/btnEnlace.module.css';
 import IMG from '../Contacto/img/QR.png';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
 
-const Contacto =()=>{
 
-  const [datas, setDatas] = useState([])
+const Contacto =()=>{
+  interface Datas{
+    imgcontact:{
+      url:string
+    }, 
+    tcontact:string, 
+    tsubcontact:string, 
+    pcontact:string, 
+    tsubcontact2:string, 
+    pcontact2:string,
+    pcontact3:string, 
+    pcontact4:string
+  }
+
+
+  const [datas, setDatas] = useState<Array<Datas>>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [stateModalOne, changeStateModalOne] = React.useState<boolean>(false)
   useEffect(()=>{

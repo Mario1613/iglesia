@@ -3,9 +3,18 @@ import style from './style/ScrollerIMG.module.css';
 import Slider from 'react-slick';
 import { useEffect, useState } from 'react';
 import React from 'react';
-const ScrollerIMG = () => {
 
-  const [data, setData] = useState([]);
+const ScrollerIMG = () => {
+  interface Date {
+    _id:string,
+    img:{
+      url:string
+    }
+  
+}
+
+  const [data, setData] = useState<Array<Date>>([]);
+
   const [isLoading, setIsLoading] = React.useState<Boolean>(true);
   useEffect(()=>{
     const consultarAPI = async () =>{
@@ -60,20 +69,14 @@ const ScrollerIMG = () => {
     ]
   };
 
-  // console.log(data[0])
-  // // const {_id} = data[0];
-  // // console.log(_id)
-  
 
   return (
     <aside className={style.backgroundWhite}>
       <div className={style.backgroundGray}>
         <div className={style.container}>
           <div className="container">
-            
             <Slider {...settings}>
-            
-            {data.map((date:any): JSX.Element=>(
+            {data.map((date:Date): JSX.Element=>(
               <div key={date._id}>
                 
               <img src={date.img.url} alt="img" className={style.ImgSize} />

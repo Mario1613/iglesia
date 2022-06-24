@@ -6,8 +6,15 @@ import React from 'react';
 
 
 export default function ProgramaAmanecer() {
-
-  const [videos, setVideos] = useState([]);
+  interface Videos{
+      id:string,
+      titlehover: string,
+      updatedAt: string,
+      videourl: string
+  }
+  
+  const [videos, setVideos] = useState<Array<Videos>>([]);
+  
   const [isLoading, setIsLoading] = useState<Boolean>(true);
 
   useEffect(()=>{
@@ -19,17 +26,15 @@ export default function ProgramaAmanecer() {
     }
     consultarAPI();
   },[]);
+  
   if(isLoading){
     return <h1>Cargando...</h1>
   }
-  
-
-  
   return (
     <section className={styles.background} >
             <h2 className={styles.titleSecundary}>Mí Devocional Amanecer En Cristo</h2>
             <article className={styles.container}> 
-            {videos.map((video)=>(<List video={video} key={video} />))}
+            {videos.map((video)=>(<List video={video} key={video.id} />))}
           
         </article>
     </section>

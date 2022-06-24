@@ -4,15 +4,26 @@ import Biblia2 from '../Books/Book2.png';
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from 'react';
 import MarqueeText from '../../components/MarqueeText';
-const Books = () => {    
-    const [datas, setData] = useState([]);
+
+const Books = () => { 
+    interface Data {
+      id:string;
+      enlace:string;
+      portadalibros:{
+        url:string
+
+      }
+    }
+  
+
+    const [datas, setData] = useState<Array<Data>>([]);
     useEffect(()=>{
         const consultarAPI = async () =>{
             try{
             const url:string = 'https://dolphin-app-rn85f.ondigitalocean.app/libros';
             const respuesta = await fetch(url);
             const resultado = await respuesta.json()
-            // console.log(resultado[0])
+            
                 setData(resultado.reverse());
               }catch(error){
                 console.log('error') 

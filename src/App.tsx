@@ -24,7 +24,6 @@ const App = ()=> {
       <Router >
         <Nav />
         <Switch>
-
           <Route path='/' component={Inicio} exact>
             <Inicio />
             <Nosotros />
@@ -33,18 +32,13 @@ const App = ()=> {
             <ScrollerIMG />
             <Footer />
           </Route>
-
           <Route path="/capellania" component={Capellania}>
             <Capellania />
-
           </Route>
-
           <Route path="/books" component={Books}>
             <Books />
             <Footer />
-
           </Route>
-         
         </Switch>
       </Router>
     </>
