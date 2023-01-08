@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 import { BtnLink } from '../../components/BtnLink';
 import { Modal } from '../../components/Modal';
 import styles from '../Contacto/styles/contacto.module.css';
 import styleLink from '../../components/styles/btnEnlace.module.css';
 import IMG from '../Contacto/img/QR.png';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -28,6 +29,7 @@ const Contacto =()=>{
   const [datas, setDatas] = useState<Array<Datas>>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [stateModalOne, changeStateModalOne] = useState<boolean>(false)
+  const navigate = useNavigate()
   useEffect(()=>{
     const consultarAPI = async () =>{
     try{
@@ -43,6 +45,9 @@ const Contacto =()=>{
     consultarAPI();
   },[]);
 
+  const changeView = ()=>{
+    navigate("/capellania")
+  }
   
 if(isLoading){
   return <h1>Cargando...</h1>
@@ -73,7 +78,7 @@ if(isLoading){
                         <BtnLink enlace={"https://www.facebook.com/profile.php?id=100044996093662"} nameLink={'Facebook'}/>
                         <button className={styleLink.enlaceStyle} onClick={()=>changeStateModalOne(!stateModalOne)}>Donaciones</button>
                         
-                        <Link to="/capellania" className={styleLink.enlaceStyle}>Capellania</Link>
+                       <button onClick={changeView} className={styleLink.enlaceStyle}>Capellania</button>
                         {/* <BtnLink enlace={"https://www.facebook.com/mario.cortezcortes/"} nameLink={'Correo'}/> */}
                   
                       </div>
