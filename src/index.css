@@ -335,7 +335,9 @@ summary {
 /**
  * Add the correct display in IE 10+.
  */
-
+ ::-webkit-scrollbar {
+  display: none;
+}
 template {
   display: none;
 }
