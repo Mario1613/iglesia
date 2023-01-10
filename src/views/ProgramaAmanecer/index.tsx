@@ -10,24 +10,21 @@ export default function ProgramaAmanecer() {
     updatedAt: string;
     videourl: string;
   }
-
   const [videos, setVideos] = useState<Array<Videos>>([]);
-
   const [isLoading, setIsLoading] = useState<Boolean>(true);
 
   useEffect(() => {
     const consultarAPI = async () => {
-      try{
-
+      try {
         const respuesta = await fetch(
           "https://dolphin-app-rn85f.ondigitalocean.app/section-programa-amanecers"
         );
         const resultado = await respuesta.json();
-  
+
         setIsLoading(false);
         setVideos(resultado);
-      }catch(error){
-        console.log(error)
+      } catch (error) {
+        console.log(error);
       }
     };
     consultarAPI();
