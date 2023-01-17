@@ -66,6 +66,8 @@ Modal
       padding: 1rem 0;
       transition: all 3s ease;
       box-shadow: -4px 5px 8px #00000048;
+      font-size: 1.1rem;
+      font-weight: 500;
     }
   }
 
