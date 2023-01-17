@@ -63,8 +63,6 @@ Modal
       margin-left: 69vw;
       width: 31vw;
       height: 70vh;
-      font-size: 1.2rem;
-      font-weight: bold;
       padding: 1rem 0;
       transition: all 3s ease;
       box-shadow: -4px 5px 8px #00000048;
@@ -88,8 +86,8 @@ Modal
       margin-left: 69vw;
       width: 30vw;
       height: 70vh;
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1.1rem;
+      font-weight: 500;
       padding: 1rem 0;
       box-shadow: -4px 5px 8px #00000048;
     }
@@ -135,25 +133,19 @@ Modal
   .imgSize {
     width: 100%;
     border-radius: 5px;
-    @media(min-width: 768px){
+    @media (min-width: 768px) {
       float: left;
-      padding: .5rem 1rem 1rem .5rem;
+      padding: 0.5rem 1rem 1rem 0.5rem;
       width: 45%;
     }
-  }
-  .sectionTexto{
-  
   }
 
   .parrafo {
     max-width: 90%;
-
     margin: 0 auto;
     line-height: 1.5;
-    /* padding: 1rem; */
-    @media(min-width:768px){
 
-    }
+ 
   }
 `;
 function Nav() {
@@ -227,21 +219,28 @@ function Nav() {
         <div className="parrafo">
           <img src={Perfil} alt="Logo" className="imgSize" />
           <div className="sectionTexto">
-            <h3>Iván Alberto Cuenca Robles</h3>
-            <p style={{ textAlign: "justify" }}>
-              Es oriundo de Jamundí Valle en el país de Colombia, nacido el 25
-              de Septiembre de 1976, al nacer sus padres eran cristianos de la
-              Iglesia del nombre de Jesús, es nacido en un hogar cristiano y
-              toda su vida ha estado en los caminos del Señor Jesucristo, ha
-              sido servidor en la Iglesia desde niño predicando en los cultos de
-              niños, en la adolescencia, en la juventud y en su edad adulta,
-              hace 16 años sirve en el santo ministerio en países como España y
-              Estados Unidos, por la gracia del Señor Jesús ha podido cursar sus
-              estudios como Lice. en Teología, Doctorado en Filosofía y Ciencias
-              Religiosas, diplomados en Teología, Consejería Familiar, Ciencia y
-              Fe, Comunicación Radial y Televisión, Capellanía Internacional,
-              Defensor en Derechos Humanos entre otros, Actualmente es pastor en
-              Sarasota Florida en los Estados Unidos.
+            <h3
+            style={{
+              fontWeight:"bold",
+              fontSize:"1.2rem"
+            }}
+            >Iván Alberto Cuenca Robles</h3>
+            <p style={{ textAlign: "justify"}}>
+              ES ORIUNDO DE JAMUNDÍ VALLE EN 
+              EL PAÍS DE COLOMBIA, NACIDO EL 25
+              DE SEPTIEMBRE DE 1976, DE HOGAR Y 
+              PADRES CRISTIANOS EN LA IGLESIA
+              DEL NOMBRE DE JESÚS, HASTA EL DÍA 
+              DE HOY Y POR LA GRACIA DEL SEÑOR
+              JESUCRISTO SIGUE PERSISTIENDO EN SUS CAMINOS.
+              <br/> 
+              SERVIDOR DESDE SU
+              INFANCIA EN DISTINTAS AREAS DE LA IGLESIA Y EN SU EDAD ADULTA A
+              LLEVADO EL EVANGELIO A PAÍSES COMO ESPAÑA Y EEUU
+              <br/>
+               LA MISERICORDIA
+              DEL SEÑOR JESUCRISTO LE HA PERMITIDO OBTENER MÁS CONOCIMIENTO POR
+              MEDIO DE LA LIC. EN TEOLOGIA .............................
             </p>
           </div>
         </div>
