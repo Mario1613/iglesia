@@ -1,17 +1,11 @@
 import style from "./style/ScrollerIMG.module.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
-import React from "react";
+import { ImagenesScroll } from '../../interface';
 
-interface Date {
-	_id: string;
-	img: {
-		url: string;
-	};
-}
 const ScrollerIMG = () => {
-	const [data, setData] = useState<Array<Date>>([]);
-	const [isLoading, setIsLoading] = React.useState<Boolean>(true);
+	const [data, setData] = useState<Array<ImagenesScroll>>([]);
+	const [isLoading, setIsLoading] = useState<Boolean>(true);
 	const baseURL = process.env.REACT_APP_API_URL;
 
 	useEffect(() => {
@@ -75,7 +69,7 @@ const ScrollerIMG = () => {
 					<div className='container'>
 						<Slider {...settings}>
 							{data.map(
-								(date: Date): JSX.Element => (
+								(date: ImagenesScroll): JSX.Element => (
 									<div key={date._id}>
 										<img
 											src={date.img.url}

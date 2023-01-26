@@ -1,22 +1,17 @@
 import styles from "./styles/ProgramaAmanecer.module.css";
 import { useEffect, useState } from "react";
 import List from '../../components/VideosSunriseList';
+import { VideosYoutube } from '../../interface';
 
 export default function ProgramaAmanecer() {
-	interface Videos {
-		id: string;
-		titlehover: string;
-		updatedAt: string;
-		videourl: string;
-	}
-	const [videos, setVideos] = useState<Array<Videos>>([]);
+	const [videos, setVideos] = useState<Array<VideosYoutube>>([]);
 	const [isLoading, setIsLoading] = useState<Boolean>(true);
 
 	useEffect(() => {
 		const consultarAPI = async () => {
 			try {
 				const respuesta = await fetch(
-					'https://dolphin-app-rn85f.ondigitalocean.app/section-programa-amanecers'
+					`${process.env.REACT_APP_API_URL}/section-programa-amanecers`
 				);
 				const resultado = await respuesta.json();
 
