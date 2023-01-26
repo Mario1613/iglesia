@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ImagenesScroll } from '../../interface';
 
 const ScrollerIMG = () => {
-	const [data, setData] = useState<Array<ImagenesScroll>>([]);
+	const [imagenes, setImagenes] = useState<Array<ImagenesScroll>>([]);
 	const [isLoading, setIsLoading] = useState<Boolean>(true);
 	const baseURL = process.env.REACT_APP_API_URL;
 
@@ -16,7 +16,7 @@ const ScrollerIMG = () => {
 				const resultado = await respuesta.json();
 
 				setIsLoading(false);
-				setData(resultado);
+				setImagenes(resultado);
 			} catch (error) {
 				console.log(error);
 			}
@@ -68,7 +68,7 @@ const ScrollerIMG = () => {
 				<div className={style.container}>
 					<div className='container'>
 						<Slider {...settings}>
-							{data.map(
+							{imagenes.map(
 								(date: ImagenesScroll): JSX.Element => (
 									<div key={date._id}>
 										<img
