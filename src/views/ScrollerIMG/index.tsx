@@ -27,7 +27,7 @@ const ScrollerIMG = () => {
 		return <h1>Cargando...</h1>;
 	}
 
-	var settings = {
+	const settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
