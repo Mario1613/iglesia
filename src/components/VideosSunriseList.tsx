@@ -7,9 +7,9 @@ interface Video {
 }
 const List = ({video}:Video) => {
   return (
-        <div className={styles.video} >
-          <ReactPlayer url={video?.videourl} width="100%" height="100%"  />
-        </div>   
-  )
+		<div className={styles.video}>
+			<ReactPlayer url={video?.videourl} width='100%' height='100%' />
+		</div>
+	);
 }
 export default List

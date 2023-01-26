@@ -2,8 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./views/Nav";
 import Inicio from "./views/Home/index";
 import Capellania from "./views/Capellania/index";
-import Footer from "./views/Footer";
-
+import Footer from './views/Footer';
 import Books from "./views/Books";
 
 const App = () => {
