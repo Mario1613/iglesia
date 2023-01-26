@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react';
 
 const MarqueeText = () => {
     const [datas, setData] = useState([]);
-    useEffect(() => {
+      const baseURL = process.env.REACT_APP_API_URL;
+      useEffect(() => {
         const consultarAPI = async () => {
-            try {
-                const url: string = 'https://dolphin-app-rn85f.ondigitalocean.app/textodelasemanas';
-                const respuesta = await fetch(url);
-                const resultado = await respuesta.json()
-                // console.log(resultado[0]);
-                setData(resultado.reverse());
-            } catch (error) {
-                console.log('error');
-            }
-        }
+          try {
+            const url: string = `${baseURL}/textodelasemanas`;
+            const respuesta = await fetch(url);
+            const resultado = await respuesta.json();
+            setData(resultado.reverse());
+          } catch (error) {
+            console.log("error");
+          }
+        };
         consultarAPI();
-    }, []);
+      }, []);
 
     return (
         <div>

@@ -15,21 +15,21 @@ const Books = () => {
   }
 
   const [datas, setData] = useState<Array<Data>>([]);
-  useEffect(() => {
-    const consultarAPI = async () => {
-      try {
-        const url: string =
-          "https://dolphin-app-rn85f.ondigitalocean.app/libros";
-        const respuesta = await fetch(url);
-        const resultado = await respuesta.json();
+    const baseURL = process.env.REACT_APP_API_URL;
+    useEffect(() => {
+      const consultarAPI = async () => {
+        try {
+          const url: string = `${baseURL}/libros`;
+          const respuesta = await fetch(url);
+          const resultado = await respuesta.json();
 
-        setData(resultado.reverse());
-      } catch (error) {
-        console.log("error");
-      }
-    };
-    consultarAPI();
-  }, []);
+          setData(resultado.reverse());
+        } catch (error) {
+          console.log("error");
+        }
+      };
+      consultarAPI();
+    }, []);
   return (
     <>
       <section>

@@ -30,20 +30,21 @@ const Contacto =()=>{
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [stateModalOne, changeStateModalOne] = useState<boolean>(false)
   const navigate = useNavigate()
-  useEffect(()=>{
-    const consultarAPI = async () =>{
-    try{
-    const url:string = 'https://dolphin-app-rn85f.ondigitalocean.app/section-contactos';
-    const respuesta = await fetch(url);
-    const resultado = await respuesta.json()
-    setDatas(resultado)
-    setIsLoading(false)
-      }catch(error){
-        console.log('error') 
-      }
-    }
-    consultarAPI();
-  },[]);
+    const baseURL = process.env.REACT_APP_API_URL;
+    useEffect(() => {
+      const consultarAPI = async () => {
+        try {
+          const url: string = `${baseURL}/section-contactos`;
+          const respuesta = await fetch(url);
+          const resultado = await respuesta.json();
+          setDatas(resultado);
+          setIsLoading(false);
+        } catch (error) {
+          console.log("error");
+        }
+      };
+      consultarAPI();
+    }, []);
 
   const changeView = ()=>{
     navigate("/capellania")

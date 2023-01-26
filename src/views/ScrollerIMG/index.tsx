@@ -14,11 +14,12 @@ const ScrollerIMG = () => {
   const [data, setData] = useState<Array<Date>>([]);
 
   const [isLoading, setIsLoading] = React.useState<Boolean>(true);
+  const baseURL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     const consultarAPI = async () => {
       try {
-        const url: string =
-          "https://dolphin-app-rn85f.ondigitalocean.app/section-carousels";
+        const url: string = `${baseURL}/section-carousels`;
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
 

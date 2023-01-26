@@ -18,12 +18,11 @@ const Nosotros = () => {
 
   const [dates, setDates] = useState<Array<Dates>>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
+  const baseURL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const consultarAPI = async () => {
       try {
-        const url: string =
-          "https://dolphin-app-rn85f.ondigitalocean.app/section-nosotros";
+        const url: string = `${baseURL}/section-nosotros`;
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
         setDates(resultado);
